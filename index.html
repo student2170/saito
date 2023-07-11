@@ -64,9 +64,11 @@ function assessment(userName){
         sumOfCharCode = sumOfCharCode + userName.charCodeAt(i);
     }
     
-    const index = sumOfCharCode % answers.length;
-    let result = answers[index];
-    
+    const index01 = sumOfCharCode % answers.length;
+    let result01 = answers[index01];
+    const index02 = sumOfCharCode % answers.length;
+    let result02 = answers[index02];
+    result = result01+result02
     result = result.replace(/\{userName\}/g,userName);
     return result;
 }
